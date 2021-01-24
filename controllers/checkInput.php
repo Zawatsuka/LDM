@@ -22,16 +22,16 @@
             echo "c'est pas bon !";
         }
     }
-    function testData($data , $regex){
+    function testData($data , $regex , $nameOfError , $nameOfInput){
         if (!empty($data)) {
             // On test la valeur
             $testRegex = preg_match($regex, $data);
 
             if ($testRegex == false) {
-                $errorsArray['error'] = 'ce n\'est pas valide';
+                $errorsArray[$nameOfError] = 'le '.$nameOfInput.' n\'est pas valide';
             }
         } else {
-            $errorsArray['error'] = 'Le champ n\'est pas rempli';
+            $errorsArray[$nameOfError] = 'Le champ n\'est pas rempli';
         }
     }
 
@@ -52,11 +52,11 @@
 
 
         //On test si le champ n'est pas vide
-        testData($firstname , $regexText);
-        testData($lastname, $regexText);
-        testData($postalPass , $regexPostal);
-        testData($city , $regexText);
-        testData($phone , $regexPhone);
-        testData($mail , $regexEmail);
-        testData($address , $regexText);
+        testData($firstname , $regexText , 'firstname_error' , 'Prenom');
+        testData($lastname, $regexText , 'lastname_error' , 'Nom');
+        testData($postalPass , $regexPostal , 'postalPass_error' , 'Code Postal');
+        testData($city , $regexText , 'city_error' , 'Ville');
+        testData($phone , $regexPhone , 'phone_error' , 'Téléphone');
+        testData($mail , $regexEmail , 'mail_error' , 'Adresse Email');
+        testData($address , $regexText , 'address_error' , 'Adresse Postale');
     }

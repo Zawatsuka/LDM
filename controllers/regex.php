@@ -7,7 +7,7 @@ $regexPostal = '/^[0-9]{5}$/';
 
 
 // regex pour l'adresse postale 
-$regexAddress = '/^[0-9]{1,3}(?:(?:[,. ]){1}[-a-zA-Zàâäéèêëïîôöùûüç]+)+$/';
+$regexAddress = '/^(?:[0-9]+)(?:(?:[\,\.\ ]){1}|[A-Za-z\à\á\â\ä\ç\è\é\ê\ë\ì\í\î\ï\ñ\ò\ó\ô\ö\ù\ú\û\ü\-\']+)+$/';
 
 // regex pour email 
 $regexEmail = '/^[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+$/';

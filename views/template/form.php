@@ -11,42 +11,42 @@
     <!-- partie nom -->
     <div class="formStyle">
         <label for="lastname">Nom</label>
-        <input type="text" name="lastname" <?= isset($errorsArray['error']) ? 'is-invalid' : ''?> placeholder="Nom" required>
+        <input type="text" name="lastname" <?= isset($errorsArray['lastname_error']) ? 'is-invalid' : ''?> placeholder="Nom" required>
         <p><?= $errorsArray['lastname_error'] ?? ''?></p>
     </div>
 
     <!-- partie adresse postale -->
     <div class="formStyle">
         <label for="address">Adresse Postale</label>
-        <input type="text" name="address" <?= isset($errorsArray['error']) ? 'is-invalid' : ''?> placeholder="Adresse Postale" required>
+        <input type="text" name="address" <?= isset($errorsArray['address_error']) ? 'is-invalid' : ''?> placeholder="Adresse Postale" required>
         <p><?= $errorsArray['address_error'] ?? ''?></p>
     </div>
 
     <!-- partie code postale  -->
     <div class="formStyle">
         <label for="postalPass">Code Postale</label>
-        <input type="text" name="postalPass" <?= isset($errorsArray['error']) ? 'is-invalid' : ''?> placeholder="Code Postale" required>
+        <input type="text" name="postalPass" <?= isset($errorsArray['postalPass_error']) ? 'is-invalid' : ''?> placeholder="Code Postale" required>
         <p><?= $errorsArray['postalPass_error'] ?? ''?></p>
     </div>
 
     <!-- partie ville  -->
     <div class="formStyle">
         <label for="city">Ville</label>
-        <input type="text" name="city" <?= isset($errorsArray['error']) ? 'is-invalid' : ''?> placeholder="Ville" required>
+        <input type="text" name="city" <?= isset($errorsArray['city_error']) ? 'is-invalid' : ''?> placeholder="Ville" required>
         <p><?= $errorsArray['city_error'] ?? ''?></p>
     </div>
 
     <!-- partie telephone  -->
     <div class="formStyle">
         <label for="phone">Telephone</label>
-        <input type="text" name="phone" <?= isset($errorsArray['error']) ? 'is-invalid' : ''?> placeholder="Telephone" required>
+        <input type="text" name="phone" <?= isset($errorsArray['phone_error']) ? 'is-invalid' : ''?> placeholder="Telephone" required>
         <p><?= $errorsArray['phone_error'] ?? ''?></p>
     </div>
 
     <!-- partie email  -->
     <div class="formStyle">
         <label for="mail">Adresse Email</label>
-        <input type="text" name="mail" <?= isset($errorsArray['error']) ? 'is-invalid' : ''?>  placeholder="Adresse Email" required>
+        <input type="text" name="mail" <?= isset($errorsArray['mail_error']) ? 'is-invalid' : ''?>  placeholder="Adresse Email" required>
         <p><?= $errorsArray['mail_error'] ?? ''?></p>
     </div>
 
